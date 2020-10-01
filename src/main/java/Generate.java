@@ -19,6 +19,7 @@ public class Generate extends AnAction
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
         VirtualFile file = AnActionEvent.getData(VIRTUAL_FILE);
+        assert file != null;
         String filename = file.getName();
         while (filename.length() < 51)
             filename += ' ';
