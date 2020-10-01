@@ -3,11 +3,6 @@ import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-intellij {
-    version = "LATEST-EAP-SNAPSHOT"
-    type = "CL"
-}
-
 plugins {
     // Java support
     id("java")
@@ -51,9 +46,9 @@ dependencies {
 // Configure gradle-intellij-plugin plugin.
 // Read more: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {
-    pluginName = pluginName_
-    version = platformVersion
-    type = platformType
+    pluginName = "Codam Header"
+    version = "LATEST-EAP-SNAPSHOT"
+    type = "CL"
     downloadSources = platformDownloadSources.toBoolean()
     updateSinceUntilBuild = true
 
