@@ -3,7 +3,7 @@
 ![Build](https://github.com/skrtks/clion_codam_header/workflows/Build/badge.svg)    
 
 <!-- Plugin description -->
-Welcome to the Codam Header plugin for CLion. Add header to .c and .h files via <kbd>tools<kbd> > <kbd>Add codam header<kbd> or cmd-opt-h.
+Welcome to the Codam Header plugin for CLion. Add header to .c and .h files via <kbd>tools</kbd> > <kbd>Add codam header</kbd> or cmd-opt-h.
 <!-- Plugin description end -->
 
 ## Installation
