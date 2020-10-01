@@ -3,6 +3,11 @@ import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+intellij {
+    version = "LATEST-EAP-SNAPSHOT"
+    type = "CL"
+}
+
 plugins {
     // Java support
     id("java")
