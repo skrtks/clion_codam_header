@@ -50,14 +50,7 @@ public class Generate extends AnAction
                 startComment + (startComment.length() == 1 ? ' ' : "") + "                                                                            " + (endComment.length() == 1 ? " ": "") + endComment + "\n" +
                 startComment + " " + (startComment.length() == 1 ? "*" : "") + "**************************************************************************" + (endComment.length() == 1 ? "*" : "") + " " + endComment + "\n\n";
 
-        Runnable runnable = new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                Objects.requireNonNull(AnActionEvent.getData(LangDataKeys.EDITOR)).getDocument().insertString(0, header);
-            }
-        };
+        Runnable runnable = () -> Objects.requireNonNull(AnActionEvent.getData(LangDataKeys.EDITOR)).getDocument().insertString(0, header);
         WriteCommandAction.runWriteCommandAction(getEventProject(AnActionEvent), runnable);
     }
 }
