@@ -1,19 +1,17 @@
 <idea-plugin>
-    <id>com.github.skrtks.clioncodamheader</id>
-    <name>clion_codam_header</name>
-    <vendor>skrtks</vendor>
+    <id>skrtks</id>
+    <name>CodamHeader</name>
+    <version>1.1</version>
+    <vendor email="samkortekaas@protonmail.com" url="-">skrtks</vendor>
 
     <!-- Product and plugin compatibility requirements -->
-    <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.skrtks.clioncodamheader.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.skrtks.clioncodamheader.services.MyProjectService"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.skrtks.clioncodamheader.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="CodamHeader.Generate" class="Generate" text="Add codam header"
+                description="Add Codam header">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt H"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
